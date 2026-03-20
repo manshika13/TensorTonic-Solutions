@@ -6,6 +6,8 @@ def softmax(x):
     Works for 1D or 2D NumPy arrays.
     For 2D, compute row-wise softmax.
     """
+    """Reminder: input are given as np.array([1,2,3]) that does mean code convert the list into array,
+    we need to mention it explicitely in the code ,otherwise it create the problem like n.dim is not a part of list """
     x=np.array(x)
     axis=0 if x.ndim==1 else 1
     max_x=np.max(x,axis=axis,keepdims=True)
